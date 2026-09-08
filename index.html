@@ -1,0 +1,1991 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>For Mahak ❤️</title>
+
+  <style>
+
+    /* =====================================================
+       BASIC RESET
+    ===================================================== */
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+
+      background:
+        radial-gradient(
+          circle at 20% 10%,
+          rgba(255,255,255,0.75),
+          transparent 25%
+        ),
+        radial-gradient(
+          circle at 80% 90%,
+          rgba(255,255,255,0.55),
+          transparent 30%
+        ),
+        linear-gradient(
+          135deg,
+          #ffdff0,
+          #ffc1dc,
+          #f7a8ca,
+          #ef8fba
+        );
+
+      color: #71334f;
+      overflow-x: hidden;
+    }
+
+
+    /* =====================================================
+       OPENING HEART SCREEN
+    ===================================================== */
+
+    .opening {
+      position: fixed;
+      inset: 0;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background:
+        radial-gradient(
+          circle,
+          #ffeaf4,
+          #ffc7df,
+          #f4a1c5
+        );
+
+      z-index: 9999;
+
+      animation:
+        openingFade 1.4s ease 2.7s forwards;
+    }
+
+    .opening-content {
+      text-align: center;
+      animation: openingAppear 1.2s ease both;
+    }
+
+    .opening-heart {
+      font-size: 90px;
+
+      filter:
+        drop-shadow(
+          0 10px 20px rgba(150, 30, 80, 0.22)
+        );
+
+      animation:
+        heartBeat 1s ease-in-out infinite;
+    }
+
+    .opening-text {
+      margin-top: 18px;
+
+      color: #c83e75;
+
+      font-size: 20px;
+      font-weight: 600;
+
+      opacity: 0;
+
+      animation:
+        textAppear 1s ease 0.8s forwards;
+    }
+
+    @keyframes openingAppear {
+
+      from {
+        opacity: 0;
+        transform: scale(0.65);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+    }
+
+    @keyframes textAppear {
+
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+    }
+
+    @keyframes heartBeat {
+
+      0%, 100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.23);
+      }
+
+    }
+
+    @keyframes openingFade {
+
+      to {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+
+    }
+
+
+    /* =====================================================
+       FALLING HEARTS
+    ===================================================== */
+
+    .falling-hearts {
+      position: fixed;
+      inset: 0;
+
+      overflow: hidden;
+
+      pointer-events: none;
+
+      z-index: 1;
+    }
+
+    .falling-heart {
+      position: absolute;
+
+      top: -60px;
+
+      user-select: none;
+
+      opacity: 0.72;
+
+      animation-name: falling;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+
+      filter:
+        drop-shadow(
+          0 3px 5px rgba(120,30,70,0.15)
+        );
+    }
+
+    .fh1 {
+      left: 3%;
+      font-size: 21px;
+      animation-duration: 7s;
+      animation-delay: 0s;
+    }
+
+    .fh2 {
+      left: 12%;
+      font-size: 18px;
+      animation-duration: 9s;
+      animation-delay: 2s;
+    }
+
+    .fh3 {
+      left: 23%;
+      font-size: 25px;
+      animation-duration: 6.5s;
+      animation-delay: 1s;
+    }
+
+    .fh4 {
+      left: 34%;
+      font-size: 17px;
+      animation-duration: 10s;
+      animation-delay: 3s;
+    }
+
+    .fh5 {
+      left: 45%;
+      font-size: 23px;
+      animation-duration: 7.5s;
+      animation-delay: 1.5s;
+    }
+
+    .fh6 {
+      left: 57%;
+      font-size: 19px;
+      animation-duration: 8.5s;
+      animation-delay: 4s;
+    }
+
+    .fh7 {
+      left: 68%;
+      font-size: 24px;
+      animation-duration: 6.8s;
+      animation-delay: 2.5s;
+    }
+
+    .fh8 {
+      left: 79%;
+      font-size: 18px;
+      animation-duration: 9.5s;
+      animation-delay: 0.5s;
+    }
+
+    .fh9 {
+      left: 90%;
+      font-size: 22px;
+      animation-duration: 7.2s;
+      animation-delay: 3s;
+    }
+
+    .fh10 {
+      left: 97%;
+      font-size: 17px;
+      animation-duration: 8s;
+      animation-delay: 1s;
+    }
+
+    @keyframes falling {
+
+      0% {
+        transform:
+          translateY(-70px)
+          translateX(0)
+          rotate(0deg);
+      }
+
+      25% {
+        transform:
+          translateY(25vh)
+          translateX(25px)
+          rotate(90deg);
+      }
+
+      50% {
+        transform:
+          translateY(55vh)
+          translateX(-20px)
+          rotate(180deg);
+      }
+
+      75% {
+        transform:
+          translateY(80vh)
+          translateX(25px)
+          rotate(270deg);
+      }
+
+      100% {
+        transform:
+          translateY(115vh)
+          translateX(-15px)
+          rotate(360deg);
+      }
+
+    }
+
+
+    /* =====================================================
+       PAGE SYSTEM
+    ===================================================== */
+
+    .page {
+      position: relative;
+
+      z-index: 2;
+
+      min-height: 100vh;
+
+      display: none;
+
+      align-items: center;
+      justify-content: center;
+
+      padding: 35px 17px;
+    }
+
+    .page.active {
+      display: flex;
+
+      animation:
+        pageEnter 0.75s ease both;
+    }
+
+    @keyframes pageEnter {
+
+      from {
+        opacity: 0;
+        transform:
+          translateY(30px)
+          scale(0.97);
+      }
+
+      to {
+        opacity: 1;
+        transform:
+          translateY(0)
+          scale(1);
+      }
+
+    }
+
+
+    /* =====================================================
+       CARD
+    ===================================================== */
+
+    .card {
+
+      width: 100%;
+      max-width: 700px;
+
+      padding: 36px 26px;
+
+      text-align: center;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,0.96),
+          rgba(255,246,251,0.94)
+        );
+
+      border:
+        2px solid rgba(255,255,255,0.9);
+
+      border-radius: 32px;
+
+      box-shadow:
+        0 25px 65px rgba(126,31,77,0.20),
+        inset 0 0 30px rgba(255,255,255,0.75);
+
+      backdrop-filter: blur(10px);
+
+      position: relative;
+
+      overflow: hidden;
+    }
+
+    .card::before {
+
+      content: "";
+
+      position: absolute;
+
+      width: 160px;
+      height: 160px;
+
+      top: -70px;
+      left: -70px;
+
+      background:
+        radial-gradient(
+          circle,
+          rgba(255,182,213,0.32),
+          transparent 70%
+        );
+
+      border-radius: 50%;
+    }
+
+    .card::after {
+
+      content: "";
+
+      position: absolute;
+
+      width: 150px;
+      height: 150px;
+
+      right: -65px;
+      bottom: -65px;
+
+      background:
+        radial-gradient(
+          circle,
+          rgba(255,182,213,0.28),
+          transparent 70%
+        );
+
+      border-radius: 50%;
+    }
+
+
+    /* =====================================================
+       DECORATION
+    ===================================================== */
+
+    .rose {
+
+      font-size: 45px;
+
+      margin-bottom: 12px;
+
+      position: relative;
+      z-index: 2;
+
+      animation:
+        gentleFloat 3s ease-in-out infinite;
+    }
+
+    @keyframes gentleFloat {
+
+      0%, 100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-7px);
+      }
+
+    }
+
+    .title {
+
+      position: relative;
+      z-index: 2;
+
+      color: #d94d86;
+
+      font-size:
+        clamp(30px, 8vw, 47px);
+
+      line-height: 1.25;
+
+      font-weight: 750;
+
+      margin-bottom: 19px;
+    }
+
+    .divider {
+
+      width: 92px;
+      height: 4px;
+
+      margin:
+        0 auto 27px;
+
+      border-radius: 50px;
+
+      background:
+        linear-gradient(
+          90deg,
+          #ee8ab2,
+          #d94d86,
+          #ee8ab2
+        );
+
+      position: relative;
+      z-index: 2;
+    }
+
+
+    /* =====================================================
+       MESSAGE
+    ===================================================== */
+
+    .message {
+
+      position: relative;
+      z-index: 2;
+
+      color: #71334f;
+
+      font-size: 17px;
+
+      line-height: 1.9;
+
+      text-align: center;
+    }
+
+    .message p {
+
+      margin-bottom: 17px;
+    }
+
+    .highlight {
+
+      color: #d33f7c;
+
+      font-weight: 700;
+    }
+
+    .bold {
+
+      color: #9d315f;
+
+      font-weight: 700;
+    }
+
+
+    /* =====================================================
+       CARE INTRO
+    ===================================================== */
+
+    .care-intro {
+
+      margin:
+        22px auto;
+
+      padding: 18px;
+
+      max-width: 580px;
+
+      border-radius: 21px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #fff0f7,
+          #ffe3ef
+        );
+
+      border:
+        1px solid #f2bfd5;
+
+      box-shadow:
+        0 8px 25px rgba(180,45,100,0.08);
+
+      line-height: 1.75;
+
+      font-size: 15px;
+    }
+
+
+    /* =====================================================
+       ROUTINE TITLE
+    ===================================================== */
+
+    .routine-title {
+
+      margin:
+        27px 0 16px;
+
+      color: #c93f76;
+
+      font-size: 23px;
+
+      line-height: 1.4;
+    }
+
+
+    /* =====================================================
+       CARE TABLE
+    ===================================================== */
+
+    .table-wrapper {
+
+      width: 100%;
+
+      overflow-x: auto;
+
+      border-radius: 19px;
+
+      box-shadow:
+        0 9px 25px rgba(150,50,95,0.10);
+    }
+
+    .care-table {
+
+      width: 100%;
+
+      min-width: 560px;
+
+      border-collapse: collapse;
+
+      background: #fffafd;
+
+      overflow: hidden;
+    }
+
+    .care-table th {
+
+      padding: 14px 10px;
+
+      color: white;
+
+      background:
+        linear-gradient(
+          135deg,
+          #e96b9b,
+          #d9477f
+        );
+
+      font-size: 14px;
+    }
+
+    .care-table td {
+
+      padding: 15px 10px;
+
+      color: #71334f;
+
+      font-size: 13.5px;
+
+      line-height: 1.6;
+
+      border-bottom:
+        1px solid #f3d3e1;
+
+      vertical-align: middle;
+    }
+
+    .care-table tr:last-child td {
+
+      border-bottom: none;
+    }
+
+    .care-table td:first-child {
+
+      color: #c43d74;
+
+      font-weight: 700;
+
+      white-space: nowrap;
+    }
+
+
+    /* =====================================================
+       WARNING BOX
+    ===================================================== */
+
+    .warning {
+
+      margin-top: 22px;
+
+      padding: 17px;
+
+      border-radius: 19px;
+
+      background: #fff6f9;
+
+      border:
+        1px solid #f0c1d3;
+
+      color: #733b54;
+
+      font-size: 13px;
+
+      line-height: 1.7;
+
+      text-align: left;
+    }
+
+
+    /* =====================================================
+       SUCCESS BOX
+    ===================================================== */
+
+    .success-box {
+
+      max-width: 540px;
+
+      margin:
+        25px auto;
+
+      padding: 24px 18px;
+
+      border-radius: 23px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #ffdeed,
+          #fff1f7
+        );
+
+      border:
+        2px solid #f3b4ce;
+
+      box-shadow:
+        0 12px 35px rgba(180,45,100,0.12),
+        inset 0 0 25px rgba(255,255,255,0.75);
+
+      animation:
+        softGlow 2.5s ease-in-out infinite;
+    }
+
+    .success-small {
+
+      color: #c83e75;
+
+      font-size: 16px;
+
+      font-weight: 600;
+    }
+
+    .success-main {
+
+      color: #d33473;
+
+      font-size: 22px;
+
+      font-weight: 800;
+    }
+
+    @keyframes softGlow {
+
+      0%, 100% {
+
+        transform: scale(1);
+
+        box-shadow:
+          0 12px 35px rgba(180,45,100,0.12),
+          inset 0 0 25px rgba(255,255,255,0.75);
+      }
+
+      50% {
+
+        transform: scale(1.015);
+
+        box-shadow:
+          0 15px 42px rgba(180,45,100,0.19),
+          inset 0 0 30px rgba(255,255,255,0.85);
+      }
+
+    }
+
+
+    /* =====================================================
+       BOTTOM HEART
+    ===================================================== */
+
+    .bottom-heart {
+
+      position: relative;
+      z-index: 2;
+
+      margin-top: 27px;
+
+      font-size: 32px;
+
+      animation:
+        heartBeat 1.45s ease-in-out infinite;
+    }
+
+
+    /* =====================================================
+       FINAL HEARTS
+    ===================================================== */
+
+    .final-hearts {
+
+      position: relative;
+      z-index: 2;
+
+      margin-top: 27px;
+
+      font-size: 31px;
+
+      letter-spacing: 7px;
+
+      animation:
+        finalHeartBeat 1.5s ease-in-out infinite;
+    }
+
+    @keyframes finalHeartBeat {
+
+      0%, 100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.12);
+      }
+
+    }
+
+    .final-line {
+
+      position: relative;
+      z-index: 2;
+
+      margin-top: 18px;
+
+      color: #a05273;
+
+      font-size: 13px;
+
+      font-style: italic;
+    }
+
+
+    /* =====================================================
+       BUTTONS
+    ===================================================== */
+
+    .buttons {
+
+      position: relative;
+      z-index: 5;
+
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+
+      flex-wrap: wrap;
+
+      gap: 12px;
+
+      margin-top: 29px;
+    }
+
+    .next-button,
+    .back-button {
+
+      border: none;
+
+      padding:
+        14px 29px;
+
+      border-radius: 35px;
+
+      color: white;
+
+      font-size: 16px;
+
+      font-weight: 700;
+
+      cursor: pointer;
+
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    .next-button {
+
+      background:
+        linear-gradient(
+          135deg,
+          #ed5d94,
+          #d73f7c
+        );
+
+      box-shadow:
+        0 9px 22px rgba(200,50,110,0.27);
+    }
+
+    .back-button {
+
+      background:
+        linear-gradient(
+          135deg,
+          #eca8c4,
+          #df8eaf
+        );
+
+      box-shadow:
+        0 7px 18px rgba(180,70,110,0.16);
+    }
+
+    .next-button:hover,
+    .back-button:hover {
+
+      transform:
+        translateY(-2px)
+        scale(1.02);
+    }
+
+    .next-button:active,
+    .back-button:active {
+
+      transform:
+        scale(0.95);
+    }
+
+
+    /* =====================================================
+       PAGE INDICATOR
+    ===================================================== */
+
+    .page-number {
+
+      position: relative;
+      z-index: 2;
+
+      margin-top: 19px;
+
+      color: #bd5a80;
+
+      font-size: 12px;
+
+      letter-spacing: 1px;
+    }
+
+
+    /* =====================================================
+       HEART BURST ON NEXT
+    ===================================================== */
+
+    .burst-heart {
+
+      position: fixed;
+
+      z-index: 9998;
+
+      pointer-events: none;
+
+      font-size: 24px;
+
+      animation:
+        burst 1s ease-out forwards;
+    }
+
+    @keyframes burst {
+
+      0% {
+
+        opacity: 1;
+
+        transform:
+          translate(0,0)
+          scale(0.6)
+          rotate(0deg);
+      }
+
+      100% {
+
+        opacity: 0;
+
+        transform:
+          translate(
+            var(--x),
+            var(--y)
+          )
+          scale(1.4)
+          rotate(var(--r));
+      }
+
+    }
+
+
+    /* =====================================================
+       MOBILE
+    ===================================================== */
+
+    @media (max-width: 600px) {
+
+      .page {
+
+        padding:
+          25px 14px;
+      }
+
+      .card {
+
+        padding:
+          31px 18px;
+
+        border-radius: 27px;
+      }
+
+      .message {
+
+        font-size: 16px;
+
+        line-height: 1.86;
+      }
+
+      .title {
+
+        font-size:
+          clamp(29px, 8vw, 40px);
+      }
+
+      .care-intro {
+
+        font-size: 14px;
+      }
+
+      .success-main {
+
+        font-size: 19px;
+      }
+
+      .success-small {
+
+        font-size: 14px;
+      }
+
+      .final-hearts {
+
+        font-size: 25px;
+
+        letter-spacing: 5px;
+      }
+
+      .next-button,
+      .back-button {
+
+        padding:
+          13px 25px;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- =====================================================
+       OPENING ANIMATION
+  ===================================================== -->
+
+  <div class="opening">
+
+    <div class="opening-content">
+
+      <div class="opening-heart">
+        💗
+      </div>
+
+      <div class="opening-text">
+        Just for Mahak… 💌
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+       FALLING HEARTS
+  ===================================================== -->
+
+  <div class="falling-hearts">
+
+    <span class="falling-heart fh1">💗</span>
+    <span class="falling-heart fh2">💕</span>
+    <span class="falling-heart fh3">💖</span>
+    <span class="falling-heart fh4">💗</span>
+    <span class="falling-heart fh5">💞</span>
+    <span class="falling-heart fh6">💖</span>
+    <span class="falling-heart fh7">💕</span>
+    <span class="falling-heart fh8">💗</span>
+    <span class="falling-heart fh9">💞</span>
+    <span class="falling-heart fh10">💖</span>
+
+  </div>
+
+
+  <!-- =====================================================
+       PAGE 1
+  ===================================================== -->
+
+  <main class="page active" id="page1">
+
+    <section class="card">
+
+      <div class="rose">
+        🌹
+      </div>
+
+      <h1 class="title">
+        Hi sweetheart… ❤️
+      </h1>
+
+      <div class="divider"></div>
+
+      <div class="message">
+
+        <p>
+          सुना है आपके पैरों में दर्द हो रहा है… 🥺❤️
+        </p>
+
+        <p>
+          आप कैसे हो बाबू? 🥺<br>
+          अब ठीक हो ना?
+        </p>
+
+        <p>
+          देखो, ज्यादा परेशान या टेंशन मत लेना।<br>
+          आप जल्दी ठीक हो जाओगे, बस थोड़ा अपना ध्यान रखा करो। 🫶🏻
+        </p>
+
+        <p>
+          और हाँ…<br>
+
+          <span class="highlight">
+            लो, आपके लिए मैंने आज बहुत दिनों बाद ये छोटी-सी link बनाई है। 🥹❤️
+          </span>
+        </p>
+
+        <p>
+          बहुत दिनों बाद कुछ ऐसा करने का मन हुआ,
+          तो सोचा आपके लिए ही बनाया जाए।
+        </p>
+
+        <p>
+          <span class="bold">
+            Please इसे आगे जरूर पढ़ना, ठीक है बाबू?
+          </span>
+        </p>
+
+        <p>
+          क्योंकि इसमें थोड़ा-सा प्यार है,
+          थोड़ी-सी care है और बहुत सारी बातें हैं
+          जो मैं आपको कहना चाहता हूँ। ❤️
+        </p>
+
+        <p>
+          अब चलो…<br>
+
+          <span class="highlight">
+            Next page पर चलो, Mahak बाबू। 👀❤️
+          </span>
+        </p>
+
+      </div>
+
+      <div class="bottom-heart">
+        💗
+      </div>
+
+      <div class="buttons">
+
+        <button
+          class="next-button"
+          onclick="goToPage(2, event)">
+          Next → ❤️
+        </button>
+
+      </div>
+
+      <div class="page-number">
+        PAGE 1 OF 5
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+       PAGE 2
+  ===================================================== -->
+
+  <main class="page" id="page2">
+
+    <section class="card">
+
+      <div class="rose">
+        💌
+      </div>
+
+      <h1 class="title">
+        सुनो Mahak बाबू… 🥺❤️
+      </h1>
+
+      <div class="divider"></div>
+
+      <div class="message">
+
+        <p>
+          सुनो Mahak बाबू… 🥺
+        </p>
+
+        <p>
+          बीच में हमारी बहुत लड़ाइयाँ हुई हैं।<br>
+          और सच बोलूँ तो अभी भी कभी-कभी छोटी-बड़ी लड़ाइयाँ हो ही जाती हैं।
+        </p>
+
+        <p>
+          कभी मिलने की बात पर, कभी किसी और बात पर…<br>
+          लेकिन मुझे अब भी लगता है कि
+
+          <span class="highlight">
+            हम दोनों मिलकर अपनी सारी चीज़ें धीरे-धीरे सुलझा लेंगे।
+          </span> ❤️
+        </p>
+
+        <p>
+          हर चीज़ एकदम से perfect हो जाए,
+          ऐसा जरूरी भी नहीं है।
+        </p>
+
+        <p>
+          लड़ाइयाँ अपनी जगह हैं…<br>
+          नाराज़गी अपनी जगह है…<br>
+          लेकिन
+
+          <span class="bold">
+            आपको दर्द हो रहा हो, आपको कोई तकलीफ हो रही हो—
+            तो वो मेरे लिए सबसे पहले है।
+          </span>
+        </p>
+
+        <p>
+          क्योंकि चाहे हमारे बीच कितनी भी लड़ाई क्यों न हो जाए,
+
+          <span class="highlight">
+            मैं आपको तकलीफ में नहीं देख सकता।
+          </span> 🥺
+        </p>
+
+        <p>
+          इसलिए अभी बाकी चीज़ें थोड़ी side में रखो
+          और पहले अपने पैर का ध्यान रखो, बाबू। ❤️
+        </p>
+
+        <p>
+          बाकी बातें हम बाद में भी सुलझा लेंगे।<br>
+          अभी बस आप ठीक रहो। 🫶🏻
+        </p>
+
+      </div>
+
+      <div class="bottom-heart">
+        💗
+      </div>
+
+      <div class="buttons">
+
+        <button
+          class="back-button"
+          onclick="goToPage(1, event)">
+          ← Back
+        </button>
+
+        <button
+          class="next-button"
+          onclick="goToPage(3, event)">
+          Next → ❤️
+        </button>
+
+      </div>
+
+      <div class="page-number">
+        PAGE 2 OF 5
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+       PAGE 3
+  ===================================================== -->
+
+  <main class="page" id="page3">
+
+    <section class="card">
+
+      <div class="rose">
+        🌷
+      </div>
+
+      <h1 class="title">
+        थोड़ा अपना भी ध्यान रखो 🥺❤️
+      </h1>
+
+      <div class="divider"></div>
+
+      <div class="message">
+
+        <p>
+          Mahak बाबू, मुझे पता है आप कितनी मेहनत कर रहे हो।
+        </p>
+
+        <p>
+          पेपर भी आने वाला है, उसकी tension अलग होगी…<br>
+          ऊपर से कॉलेज जाना, ट्यूशन पढ़ाने जाना,
+          धूप में आना-जाना, इतना चलना-फिरना,
+          काम करना, घर के काम करना…
+        </p>
+
+        <p>
+
+          <span class="bold">
+            इतना सब करने के बाद पैरों में दर्द होना भी possible है,
+            इसलिए अपने शरीर को थोड़ा आराम देना भी जरूरी है। ❤️
+          </span>
+
+        </p>
+
+        <p>
+          और सबसे important—
+        </p>
+
+        <p>
+
+          <span class="highlight">
+            Don't worry, बाबू। 🫂
+          </span>
+
+        </p>
+
+        <p>
+          पेपर की ज्यादा tension मत लेना।<br>
+          आपने मेहनत की है, और वही सबसे बड़ी बात है।
+        </p>
+
+        <p>
+          NDA का paper है तो obviously pressure होगा,
+          लेकिन
+
+          <span class="highlight">
+            एक paper आपकी पूरी मेहनत या आपकी capability decide नहीं करता।
+          </span>
+        </p>
+
+        <p>
+          अच्छा जाएगा तो बहुत अच्छी बात है।<br>
+          और अगर किसी वजह से उम्मीद के हिसाब से नहीं भी गया,
+          तो इसका मतलब ये बिल्कुल नहीं कि आपकी मेहनत बेकार चली गई।
+        </p>
+
+        <p>
+
+          <span class="bold">
+            आपने मेहनत की है—और मुझे उस मेहनत पर गर्व है। ❤️
+          </span>
+
+        </p>
+
+        <p>
+          बस अभी खुद को बहुत ज्यादा stress मत देना।
+        </p>
+
+        <p>
+          और हाँ…
+        </p>
+
+        <p>
+
+          <span class="highlight">
+            अपने sweet से पैरों का भी थोड़ा ध्यान रखना है। 👀🫶🏻
+          </span>
+
+        </p>
+
+      </div>
+
+      <div class="bottom-heart">
+        💗
+      </div>
+
+      <div class="buttons">
+
+        <button
+          class="back-button"
+          onclick="goToPage(2, event)">
+          ← Back
+        </button>
+
+        <button
+          class="next-button"
+          onclick="goToPage(4, event)">
+          Next → ❤️
+        </button>
+
+      </div>
+
+      <div class="page-number">
+        PAGE 3 OF 5
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+       PAGE 4 — CARE ROUTINE
+  ===================================================== -->
+
+  <main class="page" id="page4">
+
+    <section class="card">
+
+      <div class="rose">
+        🩷🌷🩷
+      </div>
+
+      <h1 class="title">
+        Mahak बाबू के पैरों के लिए 🦶🏻❤️
+      </h1>
+
+      <div class="divider"></div>
+
+      <div class="message">
+
+        <p>
+
+          <span class="highlight">
+            A little care for my मेहनती Mahak बाबू 🌸
+          </span>
+
+        </p>
+
+
+        <div class="care-intro">
+
+          मंकू, ये छोटी-सी care routine सिर्फ आपके लिए है। ❤️<br>
+
+          जब भी possible हो, इसे follow करने की कोशिश करना।
+          अपने पैरों को थोड़ा आराम देना भी जरूरी है। 🫶🏻
+
+        </div>
+
+
+        <h2 class="routine-title">
+          🌷 Mahak बाबू की Sweet Care Routine 🌷
+        </h2>
+
+
+        <div class="table-wrapper">
+
+          <table class="care-table">
+
+            <thead>
+
+              <tr>
+
+                <th>
+                  समय 🕐
+                </th>
+
+                <th>
+                  क्या करना है? 🦶🏻
+                </th>
+
+                <th>
+                  क्यों? 💗
+                </th>
+
+              </tr>
+
+            </thead>
+
+
+            <tbody>
+
+              <tr>
+
+                <td>
+                  🌅 सुबह
+                </td>
+
+                <td>
+                  उठकर आराम से बैठो और
+                  पैरों को हल्के हाथ से थपथपा/दबा सकते हो।
+                  अगर दर्द चोट या सूजन की वजह से नहीं है,
+                  तो बहुत हल्की massage भी कर सकते हो।
+                </td>
+
+                <td>
+                  पैरों को आराम और हल्का comfort देने के लिए।
+                </td>
+
+              </tr>
+
+
+              <tr>
+
+                <td>
+                  ☀️ दिन में
+                </td>
+
+                <td>
+                  बहुत देर लगातार खड़े रहने या
+                  ज्यादा चलने से बचो।
+                  जब मौका मिले, थोड़ी देर बैठकर आराम करो।
+                </td>
+
+                <td>
+                  पैरों पर extra strain कम करने के लिए।
+                </td>
+
+              </tr>
+
+
+              <tr>
+
+                <td>
+                  🌆 शाम
+                </td>
+
+                <td>
+                  अगर दर्द सामान्य थकान जैसा है और
+                  कोई चोट/सूजन नहीं है,
+                  तो थोड़ी देर हल्की गर्म सिकाई कर सकते हो।
+                </td>
+
+                <td>
+                  आराम और comfort के लिए।
+                </td>
+
+              </tr>
+
+
+              <tr>
+
+                <td>
+                  🌙 रात
+                </td>
+
+                <td>
+                  सोने से पहले पैरों को आराम दो।
+                  चाहो तो कुछ देर पैर को थोड़ा ऊँचा रख सकते हो।
+                </td>
+
+                <td>
+                  दिनभर की मेहनत के बाद आराम देने के लिए।
+                </td>
+
+              </tr>
+
+            </tbody>
+
+          </table>
+
+        </div>
+
+
+        <div class="warning">
+
+          🩷 <strong>एक छोटी-सी जरूरी बात:</strong><br><br>
+
+          अगर पैर में चोट लगी है, बहुत ज्यादा सूजन है,
+          पैर लाल या बहुत गर्म है, सुन्नपन है,
+          चलने में बहुत परेशानी है या दर्द लगातार बढ़ रहा है,
+          तो massage या गर्म सिकाई करने के बजाय
+          किसी बड़े को बताकर डॉक्टर से सलाह लेना बेहतर है।
+          ❤️
+
+          <br><br>
+
+          और सबसे जरूरी—
+
+          <span class="highlight">
+            दर्द को छुपाकर लगातार मेहनत मत करते रहना, बाबू। 🥺
+          </span>
+
+        </div>
+
+
+        <p style="margin-top:22px;">
+          क्योंकि…
+        </p>
+
+
+        <p>
+
+          <span class="bold">
+            Mahak बाबू की care भी जरूरी है। ❤️🫂
+          </span>
+
+        </p>
+
+      </div>
+
+
+      <div class="bottom-heart">
+        💗
+      </div>
+
+
+      <div class="buttons">
+
+        <button
+          class="back-button"
+          onclick="goToPage(3, event)">
+          ← Back
+        </button>
+
+        <button
+          class="next-button"
+          onclick="goToPage(5, event)">
+          Next → 💗
+        </button>
+
+      </div>
+
+
+      <div class="page-number">
+        PAGE 4 OF 5
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+       PAGE 5 — FINAL PAGE
+  ===================================================== -->
+
+  <main class="page" id="page5">
+
+    <section class="card">
+
+      <div class="rose">
+        💐
+      </div>
+
+
+      <h1 class="title">
+        बस एक आखिरी बात… 🥺❤️
+      </h1>
+
+
+      <div class="divider"></div>
+
+
+      <div class="message">
+
+        <p>
+          Mahak बाबू…
+        </p>
+
+
+        <p>
+          अब ज्यादा stress नहीं लेना, okay? 🥺❤️
+        </p>
+
+
+        <p>
+          आपका paper है, आपका काम है,
+          आपकी responsibilities हैं—
+          सब अपनी जगह हैं।
+        </p>
+
+
+        <p>
+
+          लेकिन
+
+          <span class="highlight">
+            आप खुद भी important हो।
+          </span>
+
+        </p>
+
+
+        <p>
+          आपने जितनी मेहनत की है,
+          जितना समय लगाया है,
+          जितना सब manage किया है…
+        </p>
+
+
+        <p>
+
+          <span class="bold">
+            I am genuinely proud of you. ❤️
+          </span>
+
+        </p>
+
+
+        <p>
+          Result जैसा भी हो,
+          एक चीज़ कोई आपसे नहीं छीन सकता—
+        </p>
+
+
+        <div class="success-box">
+
+          <span class="success-small">
+            ❤️ सबसे बड़ी बात ❤️
+          </span>
+
+          <br><br>
+
+          <span class="success-main">
+            आपने अपनी तरफ से पूरी मेहनत की।
+          </span>
+
+          <br><br>
+
+          <span class="success-small">
+            और मेरे लिए वही सबसे बड़ी success है। 🫶🏻
+          </span>
+
+        </div>
+
+
+        <p>
+          इसलिए अभी बस थोड़ा आराम करो,
+          अपने पैरों का ध्यान रखो,
+          paper की तैयारी करो,
+          और खुद को unnecessarily stress मत दो।
+        </p>
+
+
+        <p>
+          बाकी जो होना होगा,
+          अच्छे के लिए होगा। ❤️
+        </p>
+
+
+        <p>
+          और हाँ…
+        </p>
+
+
+        <p>
+          हमारी लड़ाइयाँ चलती रहेंगी,
+          हम एक-दूसरे को परेशान भी करते रहेंगे 😂,
+          लेकिन इन सबके बीच एक बात हमेशा रहेगी—
+        </p>
+
+
+        <p>
+
+          <span class="highlight">
+            आपकी तकलीफ मेरे लिए matter करती है। 🥺❤️
+          </span>
+
+        </p>
+
+
+        <p>
+          So please take care of yourself,
+          Mahak बाबू। 🫂
+        </p>
+
+
+        <p>
+
+          <span class="bold">
+            जल्दी ठीक हो जाओ। ❤️
+          </span>
+
+        </p>
+
+      </div>
+
+
+      <div class="final-hearts">
+        💗 💕 💗
+      </div>
+
+
+      <div class="final-line">
+        Made with a little care & lots of feelings… 💌
+      </div>
+
+
+      <div class="buttons">
+
+        <button
+          class="back-button"
+          onclick="goToPage(4, event)">
+          ← Back
+        </button>
+
+        <button
+          class="next-button"
+          onclick="goToPage(1, event)">
+          Read Again ❤️
+        </button>
+
+      </div>
+
+
+      <div class="page-number">
+        PAGE 5 OF 5
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+  ===================================================== -->
+
+  <script>
+
+    /* -----------------------------------------------------
+       PAGE NAVIGATION
+    ----------------------------------------------------- */
+
+    function goToPage(pageNumber, event) {
+
+      /* Heart burst from button */
+      createHeartBurst(event);
+
+      /* Hide every page */
+      const allPages =
+        document.querySelectorAll(".page");
+
+      allPages.forEach(function(page) {
+
+        page.classList.remove("active");
+
+      });
+
+
+      /* Show selected page */
+      const selectedPage =
+        document.getElementById(
+          "page" + pageNumber
+        );
+
+      if (selectedPage) {
+
+        selectedPage.classList.add("active");
+
+      }
+
+
+      /* Always return to top */
+      window.scrollTo({
+
+        top: 0,
+
+        behavior: "smooth"
+
+      });
+
+    }
+
+
+    /* -----------------------------------------------------
+       HEART BURST
+    ----------------------------------------------------- */
+
+    function createHeartBurst(event) {
+
+      if (!event) {
+        return;
+      }
+
+      const button =
+        event.currentTarget;
+
+      const rect =
+        button.getBoundingClientRect();
+
+      const hearts = [
+        "💗",
+        "💕",
+        "💖",
+        "💞",
+        "❤️"
+      ];
+
+
+      for (
+        let i = 0;
+        i < 8;
+        i++
+      ) {
+
+        const heart =
+          document.createElement("span");
+
+        heart.className =
+          "burst-heart";
+
+        heart.textContent =
+          hearts[
+            Math.floor(
+              Math.random() *
+              hearts.length
+            )
+          ];
+
+
+        heart.style.left =
+          (
+            rect.left +
+            rect.width / 2
+          ) + "px";
+
+
+        heart.style.top =
+          (
+            rect.top +
+            rect.height / 2
+          ) + "px";
+
+
+        const x =
+          (
+            Math.random() * 180
+          ) - 90;
+
+
+        const y =
+          -(
+            70 +
+            Math.random() * 150
+          );
+
+
+        const rotation =
+          (
+            Math.random() * 100
+          ) - 50;
+
+
+        heart.style.setProperty(
+          "--x",
+          x + "px"
+        );
+
+
+        heart.style.setProperty(
+          "--y",
+          y + "px"
+        );
+
+
+        heart.style.setProperty(
+          "--r",
+          rotation + "deg"
+        );
+
+
+        document.body.appendChild(
+          heart
+        );
+
+
+        setTimeout(
+          function() {
+
+            heart.remove();
+
+          },
+          1000
+        );
+
+      }
+
+    }
+
+  </script>
+
+</body>
+
+</html>
